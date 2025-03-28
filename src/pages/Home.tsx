@@ -1,3 +1,4 @@
+
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { 
@@ -82,7 +83,7 @@ const Home = () => {
         <div className="container mx-auto px-4 z-10 text-center">
           <ScrollReveal>
             <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white">
-              Welcome to <span className="text-sparkit-blue neon-text">Sparkit Electronics</span>
+              Welcome to <span className="text-sparkit-blue animate-pulse transition-all duration-500 hover:scale-105 hover:text-sparkit-accent">Sparkit Electronics</span>
             </h1>
           </ScrollReveal>
           
@@ -193,23 +194,23 @@ const Home = () => {
                   <ul className="space-y-2 text-gray-300">
                     <li className="flex justify-between">
                       <span>Monday</span>
-                      <span>9:00 AM - 6:00 PM</span>
+                      <span>9:00 AM - 5:00 PM</span>
                     </li>
                     <li className="flex justify-between">
                       <span>Tuesday</span>
-                      <span>9:00 AM - 6:00 PM</span>
+                      <span>9:00 AM - 5:00 PM</span>
                     </li>
                     <li className="flex justify-between">
                       <span>Wednesday</span>
-                      <span>9:00 AM - 6:00 PM</span>
+                      <span>9:00 AM - 5:00 PM</span>
                     </li>
                     <li className="flex justify-between">
                       <span>Thursday</span>
-                      <span>9:00 AM - 6:00 PM</span>
+                      <span>9:00 AM - 5:00 PM</span>
                     </li>
                     <li className="flex justify-between">
                       <span>Friday</span>
-                      <span>9:00 AM - 6:00 PM</span>
+                      <span className="text-red-400">Half Day / Closed</span>
                     </li>
                   </ul>
                 </div>
@@ -224,17 +225,17 @@ const Home = () => {
                   <ul className="space-y-2 text-gray-300">
                     <li className="flex justify-between">
                       <span>Saturday</span>
-                      <span>10:00 AM - 4:00 PM</span>
+                      <span>9:00 AM - 5:00 PM</span>
                     </li>
                     <li className="flex justify-between">
                       <span>Sunday</span>
-                      <span className="text-red-400">Closed</span>
+                      <span>9:00 AM - 5:00 PM</span>
                     </li>
                   </ul>
                   <div className="mt-6 pt-4 border-t border-border/50">
                     <p className="text-gray-400 text-sm">
                       We are also closed on major holidays. For emergency repairs, 
-                      please contact us directly at (123) 456-7890.
+                      please contact us directly at +94777 181 393.
                     </p>
                   </div>
                 </div>

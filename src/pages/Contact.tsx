@@ -18,13 +18,13 @@ const Contact = () => {
     
     // Shop hours
     const hours = {
-      0: { open: false }, // Sunday - closed
-      1: { open: true, from: 9, to: 18 }, // Monday 9AM-6PM
-      2: { open: true, from: 9, to: 18 }, // Tuesday
-      3: { open: true, from: 9, to: 18 }, // Wednesday
-      4: { open: true, from: 9, to: 18 }, // Thursday
-      5: { open: true, from: 9, to: 18 }, // Friday
-      6: { open: true, from: 10, to: 16 }, // Saturday 10AM-4PM
+      0: { open: true, from: 9, to: 17 }, // Sunday 9AM-5PM
+      1: { open: true, from: 9, to: 17 }, // Monday 9AM-5PM
+      2: { open: true, from: 9, to: 17 }, // Tuesday 9AM-5PM
+      3: { open: true, from: 9, to: 17 }, // Wednesday 9AM-5PM
+      4: { open: true, from: 9, to: 17 }, // Thursday 9AM-5PM
+      5: { open: false }, // Friday - closed or half day
+      6: { open: true, from: 9, to: 17 }, // Saturday 9AM-5PM
     };
     
     if (!hours[currentDay].open) return false;
@@ -105,9 +105,9 @@ const Contact = () => {
                     <div>
                       <h3 className="text-xl font-medium text-white mb-1">Phone</h3>
                       <p className="text-gray-300 flex items-center gap-2 group relative">
-                        (123) 456-7890
+                        +94777 181 393
                         <button 
-                          onClick={() => copyToClipboard('1234567890', 'Phone number')}
+                          onClick={() => copyToClipboard('+94777181393', 'Phone number')}
                           className="opacity-0 group-hover:opacity-100 transition-opacity text-sparkit-blue hover:text-sparkit-accent"
                           aria-label="Copy phone number"
                         >
@@ -143,9 +143,9 @@ const Contact = () => {
                     <div>
                       <h3 className="text-xl font-medium text-white mb-1">Address</h3>
                       <p className="text-gray-300 flex items-center gap-2 group relative">
-                        123 Repair Street, Electronics District, City
+                        01, 09 Shopping Complex, 52, Railway Station Rd, Gampola
                         <button 
-                          onClick={() => copyToClipboard('123 Repair Street, Electronics District, City', 'Address')}
+                          onClick={() => copyToClipboard('01, 09 Shopping Complex, 52, Railway Station Rd, Gampola', 'Address')}
                           className="opacity-0 group-hover:opacity-100 transition-opacity text-sparkit-blue hover:text-sparkit-accent"
                           aria-label="Copy address"
                         >
@@ -166,9 +166,9 @@ const Contact = () => {
                           <span className={`inline-block w-3 h-3 rounded-full ${isOpen ? 'bg-green-500 animate-pulse' : 'bg-red-500'}`}></span>
                           <span>{isOpen ? 'Currently Open' : 'Currently Closed'}</span>
                         </div>
-                        <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
-                        <p>Saturday: 10:00 AM - 4:00 PM</p>
-                        <p>Sunday: Closed</p>
+                        <p>Monday - Thursday: 9:00 AM - 5:00 PM</p>
+                        <p>Friday: Half Day / Closed</p>
+                        <p>Saturday - Sunday: 9:00 AM - 5:00 PM</p>
                       </div>
                     </div>
                   </div>
@@ -195,7 +195,7 @@ const Contact = () => {
                 
                 <div className="rounded-lg overflow-hidden border border-border h-[450px] mb-6">
                   <iframe 
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387193.30596074147!2d-74.25986548248684!3d40.697149419326095!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2s!4v1659997847752!5m2!1sen!2s" 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3957.5603037256367!2d80.6676!3d7.1656!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae380ff1e28d8c9%3A0xa20a52fc2c0d85e!2sRailway%20Station%20Rd%2C%20Gampola!5e0!3m2!1sen!2slk!4v1720086291092!5m2!1sen!2slk" 
                     width="100%" 
                     height="100%" 
                     style={{ border: 0 }} 
@@ -216,17 +216,17 @@ const Contact = () => {
                   <div className="space-y-4 text-gray-300">
                     <div>
                       <h4 className="font-medium text-white">By Car</h4>
-                      <p>Convenient street parking available directly in front of our shop. Additional parking options at the nearby Electronics District Parking Garage.</p>
+                      <p>Convenient street parking available directly in front of our shop. Located in the Shopping Complex on Railway Station Road.</p>
                     </div>
                     
                     <div>
                       <h4 className="font-medium text-white">Public Transport</h4>
-                      <p>Bus routes 42 and 56 stop right outside. The Electronics District Metro Station is just a 5-minute walk away.</p>
+                      <p>Close to the Gampola Railway Station. Local buses and tuk-tuks are readily available.</p>
                     </div>
                     
                     <div>
                       <h4 className="font-medium text-white">Walking Directions</h4>
-                      <p>From Electronics District Metro Station, head north on Main St. for 2 blocks, then turn right onto Repair Street. We're located on the left side, look for the blue Sparkit Electronics sign.</p>
+                      <p>From Gampola Railway Station, head towards Railway Station Road. Our shop is located in the Shopping Complex at number 01, 09.</p>
                     </div>
                   </div>
                 </div>

@@ -64,11 +64,11 @@ const Footer = () => {
             <ul className="space-y-3">
               <li className="flex items-start gap-3">
                 <MapPin className="text-sparkit-blue mt-1 flex-shrink-0" size={18} />
-                <span className="text-gray-400">123 Repair Street, Electronics District, City</span>
+                <span className="text-gray-400">01, 09 Shopping Complex, 52, Railway Station Rd, Gampola</span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="text-sparkit-blue flex-shrink-0" size={18} />
-                <span className="text-gray-400">(123) 456-7890</span>
+                <span className="text-gray-400">+94777 181 393</span>
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="text-sparkit-blue flex-shrink-0" size={18} />
@@ -77,9 +77,9 @@ const Footer = () => {
               <li className="flex items-start gap-3">
                 <Clock className="text-sparkit-blue mt-1 flex-shrink-0" size={18} />
                 <div className="text-gray-400">
-                  <p>Mon-Fri: 9:00 AM - 6:00 PM</p>
-                  <p>Sat: 10:00 AM - 4:00 PM</p>
-                  <p>Sun: Closed</p>
+                  <p>Mon-Thurs: 9:00 AM - 5:00 PM</p>
+                  <p>Fri: Half Day / Closed</p>
+                  <p>Sat-Sun: 9:00 AM - 5:00 PM</p>
                 </div>
               </li>
             </ul>

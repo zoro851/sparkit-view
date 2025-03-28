@@ -12,6 +12,7 @@ import NotFound from "./pages/NotFound";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import CursorEffect from "./components/CursorEffect";
+import InteractiveBackground from "./components/InteractiveBackground";
 
 const queryClient = new QueryClient();
 
@@ -34,6 +35,7 @@ const App = () => (
           </main>
           <Footer />
         </div>
+        <InteractiveBackground />
         <CursorEffect />
       </BrowserRouter>
     </TooltipProvider>

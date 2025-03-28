@@ -1,7 +1,8 @@
+
 import React, { useState } from 'react';
 import { 
   Trophy, Heart, Star, Clock, Wrench,
-  ChevronLeft, ChevronRight 
+  ChevronLeft, ChevronRight, Monitor, Cpu 
 } from 'lucide-react';
 import ScrollReveal from '../components/ScrollReveal';
 
@@ -21,6 +22,20 @@ const About = () => {
     { name: 'Diagnostics', level: 90 },
     { name: 'Circuit Analysis', level: 85 },
     { name: 'Software Troubleshooting', level: 80 },
+  ];
+
+  const softwareSkills = [
+    { name: 'Software Troubleshooting', level: 98 },
+    { name: 'Operating Systems', level: 95 },
+    { name: 'Data Recovery', level: 90 },
+    { name: 'Network Solutions', level: 85 },
+  ];
+
+  const hybridSkills = [
+    { name: 'Hardware Repair', level: 90 },
+    { name: 'Software Solutions', level: 92 },
+    { name: 'System Integration', level: 88 },
+    { name: 'Network Configuration', level: 85 },
   ];
 
   const nextSlide = () => {
@@ -146,17 +161,18 @@ const About = () => {
         <div className="container mx-auto px-4">
           <ScrollReveal>
             <h2 className="text-3xl font-bold mb-3 text-center text-white">
-              Meet the <span className="text-sparkit-blue">Expert</span>
+              Meet Our <span className="text-sparkit-blue">Team</span>
             </h2>
           </ScrollReveal>
           
           <ScrollReveal delay={0.2}>
             <p className="text-gray-400 text-center mb-12 max-w-2xl mx-auto">
-              Our shop is led by a skilled technician with years of experience in electronic repair.
+              Our shop is led by skilled technicians with years of experience in electronic repair.
             </p>
           </ScrollReveal>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          {/* Ajmal Shaheel */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-20">
             <ScrollReveal>
               <div className="relative h-[400px] overflow-hidden rounded-lg transform transition-transform hover:scale-[1.02] duration-500 group">
                 <img 
@@ -192,6 +208,116 @@ const About = () => {
                 
                 <div className="space-y-4 mt-8">
                   {skills.map((skill, index) => (
+                    <div key={index}>
+                      <div className="flex justify-between mb-1">
+                        <span className="text-gray-300">{skill.name}</span>
+                        <span className="text-sparkit-blue font-medium">{skill.level}%</span>
+                      </div>
+                      <div className="w-full bg-muted rounded-full h-2">
+                        <div 
+                          className="bg-sparkit-blue h-full rounded-full animate-pulse-slow"
+                          style={{ width: `${skill.level}%` }}
+                        />
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </ScrollReveal>
+          </div>
+
+          {/* Haakim Ahamed */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-20">
+            <ScrollReveal delay={0.3} direction="right">
+              <div>
+                <h3 className="text-2xl font-bold mb-4 text-white">
+                  Haakim Ahamed
+                </h3>
+                <p className="text-gray-300 mb-6">
+                  Haakim is our software specialist with extensive knowledge in troubleshooting and resolving complex software issues across multiple operating systems and platforms. His analytical approach and attention to detail make him the go-to person for all software-related problems.
+                </p>
+                <p className="text-gray-300 mb-6">
+                  He excels in data recovery, operating system repairs, and providing customized software solutions. Haakim continuously updates his skills to stay current with the latest software technologies and security practices.
+                </p>
+                
+                <div className="space-y-4 mt-8">
+                  {softwareSkills.map((skill, index) => (
+                    <div key={index}>
+                      <div className="flex justify-between mb-1">
+                        <span className="text-gray-300">{skill.name}</span>
+                        <span className="text-sparkit-blue font-medium">{skill.level}%</span>
+                      </div>
+                      <div className="w-full bg-muted rounded-full h-2">
+                        <div 
+                          className="bg-sparkit-blue h-full rounded-full animate-pulse-slow"
+                          style={{ width: `${skill.level}%` }}
+                        />
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </ScrollReveal>
+            
+            <ScrollReveal>
+              <div className="relative h-[400px] overflow-hidden rounded-lg transform transition-transform hover:scale-[1.02] duration-500 group">
+                <img 
+                  src="https://images.unsplash.com/photo-1590086782957-93c06ef21604?q=80&w=1774&auto=format&fit=crop" 
+                  alt="Haakim Ahamed" 
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-sparkit-darker via-transparent to-transparent"></div>
+                <div className="absolute bottom-0 left-0 right-0 p-6">
+                  <div className="bg-sparkit-darker/80 backdrop-blur-sm p-4 rounded-lg border border-sparkit-blue/30 transform transition-transform group-hover:translate-y-0 translate-y-2 duration-500">
+                    <h3 className="text-2xl font-bold text-white">Haakim Ahamed</h3>
+                    <p className="text-sparkit-blue font-medium">Software Specialist</p>
+                    <div className="mt-2 flex items-center">
+                      <Monitor className="text-sparkit-blue mr-2" size={16} />
+                      <span className="text-gray-300 text-sm">Software Solutions Expert</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </ScrollReveal>
+          </div>
+
+          {/* Abdulla Zulkifil */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <ScrollReveal>
+              <div className="relative h-[400px] overflow-hidden rounded-lg transform transition-transform hover:scale-[1.02] duration-500 group">
+                <img 
+                  src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=1774&auto=format&fit=crop" 
+                  alt="Abdulla Zulkifil" 
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-sparkit-darker via-transparent to-transparent"></div>
+                <div className="absolute bottom-0 left-0 right-0 p-6">
+                  <div className="bg-sparkit-darker/80 backdrop-blur-sm p-4 rounded-lg border border-sparkit-blue/30 transform transition-transform group-hover:translate-y-0 translate-y-2 duration-500">
+                    <h3 className="text-2xl font-bold text-white">Abdulla Zulkifil</h3>
+                    <p className="text-sparkit-blue font-medium">Hardware & Software Technician</p>
+                    <div className="mt-2 flex items-center">
+                      <Cpu className="text-sparkit-blue mr-2" size={16} />
+                      <span className="text-gray-300 text-sm">Hybrid Solutions Expert</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </ScrollReveal>
+            
+            <ScrollReveal delay={0.3} direction="left">
+              <div>
+                <h3 className="text-2xl font-bold mb-4 text-white">
+                  Abdulla Zulkifil
+                </h3>
+                <p className="text-gray-300 mb-6">
+                  Abdulla brings versatility to our team with his expertise in both hardware and software repair. His comprehensive understanding of how hardware and software systems interact allows him to diagnose and fix complex issues that span both domains.
+                </p>
+                <p className="text-gray-300 mb-6">
+                  With a background in system integration and networking, Abdulla is particularly skilled at resolving issues that require both physical repairs and software configuration. His holistic approach ensures that repairs address the root cause of problems rather than just the symptoms.
+                </p>
+                
+                <div className="space-y-4 mt-8">
+                  {hybridSkills.map((skill, index) => (
                     <div key={index}>
                       <div className="flex justify-between mb-1">
                         <span className="text-gray-300">{skill.name}</span>

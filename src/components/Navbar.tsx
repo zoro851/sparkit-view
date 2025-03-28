@@ -17,8 +17,9 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Close mobile menu on path change
+  // Reset scroll position and close mobile menu on path change
   useEffect(() => {
+    window.scrollTo(0, 0);
     setIsOpen(false);
   }, [location.pathname]);
 

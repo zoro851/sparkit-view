@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 
 const CursorEffect = () => {
@@ -6,6 +5,7 @@ const CursorEffect = () => {
   const [hidden, setHidden] = useState(false);
   const [clicked, setClicked] = useState(false);
   const [linkHovered, setLinkHovered] = useState(false);
+  const [trail, setTrail] = useState<{ x: number, y: number, opacity: number }[]>([]);
 
   useEffect(() => {
     const addEventListeners = () => {
@@ -26,6 +26,13 @@ const CursorEffect = () => {
 
     const onMouseMove = (e: MouseEvent) => {
       setPosition({ x: e.clientX, y: e.clientY });
+      
+      // Add trail effect
+      setTrail(prevTrail => {
+        const newTrail = [...prevTrail, { x: e.clientX, y: e.clientY, opacity: 1 }];
+        // Keep only the last 10 points for the trail
+        return newTrail.slice(-10);
+      });
     };
 
     const onMouseEnter = () => {
@@ -63,6 +70,18 @@ const CursorEffect = () => {
       });
     };
 
+    // Fade out trail effect
+    const fadeTrail = () => {
+      setTrail(prevTrail => 
+        prevTrail.map(point => ({
+          ...point,
+          opacity: point.opacity > 0 ? point.opacity - 0.05 : 0
+        })).filter(point => point.opacity > 0)
+      );
+    };
+
+    const fadeInterval = setInterval(fadeTrail, 50);
+
     // Call once and then set up a mutation observer to handle dynamically added elements
     handleLinkElements();
     
@@ -72,6 +91,7 @@ const CursorEffect = () => {
     return () => {
       removeEventListeners();
       observer.disconnect();
+      clearInterval(fadeInterval);
       
       const allLinks = document.querySelectorAll('a, button, .hover-effect');
       allLinks.forEach((link) => {
@@ -88,6 +108,28 @@ const CursorEffect = () => {
 
   return (
     <>
+      {/* Trail effect */}
+      {trail.map((point, index) => (
+        <div
+          key={index}
+          className="cursor-trail"
+          style={{
+            left: `${point.x}px`,
+            top: `${point.y}px`,
+            opacity: point.opacity,
+            width: `${8 + (index * 0.5)}px`,
+            height: `${8 + (index * 0.5)}px`,
+            backgroundColor: `rgba(0, 162, 255, ${0.2 * point.opacity})`,
+            position: 'fixed',
+            borderRadius: '50%',
+            pointerEvents: 'none',
+            zIndex: 49,
+            transform: 'translate(-50%, -50%)',
+            transition: 'opacity 0.2s ease-out',
+          }}
+        />
+      ))}
+
       <div
         className={`cursor-dot ${hidden ? 'opacity-0' : 'opacity-100'} ${
           clicked ? 'scale-50' : 'scale-100'

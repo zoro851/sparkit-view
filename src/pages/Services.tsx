@@ -1,9 +1,8 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { 
-  Cpu, Tv, Gamepad, Zap, Tool, Bug, Database, 
-  RefreshCw, Shield, Wrench, BarChart, Cable,
+  Cpu, Tv, Gamepad, Zap, Wrench, Bug, Database, 
+  RefreshCw, Shield, Cable, BarChart,
   Tv2, Disc, Fan 
 } from 'lucide-react';
 import ScrollReveal from '../components/ScrollReveal';
@@ -17,7 +16,7 @@ const Services = () => {
       services: [
         {
           name: 'Hardware Repair & Upgrades',
-          icon: <Tool size={24} />,
+          icon: <Wrench size={24} />,
           description: 'Motherboard repair, component replacement, RAM/SSD upgrades, screen replacements, and keyboard fixes.'
         },
         {
@@ -71,7 +70,7 @@ const Services = () => {
       services: [
         {
           name: 'Controller Repairs',
-          icon: <Tool size={24} />,
+          icon: <Wrench size={24} />,
           description: 'Fixing controller drift, button issues, connection problems, and battery replacements.'
         },
         {
@@ -103,7 +102,7 @@ const Services = () => {
         },
         {
           name: 'Home Appliances',
-          icon: <Tool size={24} />,
+          icon: <Wrench size={24} />,
           description: 'Electronic repairs for kitchen appliances, smart home devices, and entertainment systems.'
         },
         {

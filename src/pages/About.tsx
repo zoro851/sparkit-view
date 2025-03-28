@@ -1,7 +1,6 @@
-
 import React, { useState } from 'react';
 import { 
-  Trophy, Heart, Star, Clock, Tool,
+  Trophy, Heart, Star, Clock, Wrench,
   ChevronLeft, ChevronRight 
 } from 'lucide-react';
 import ScrollReveal from '../components/ScrollReveal';
@@ -76,7 +75,7 @@ const About = () => {
                 <div className="space-y-4">
                   <div className="flex items-start gap-4">
                     <div className="w-10 h-10 rounded-full bg-sparkit-blue/20 flex items-center justify-center flex-shrink-0 mt-1">
-                      <Tool className="text-sparkit-blue" size={20} />
+                      <Wrench className="text-sparkit-blue" size={20} />
                     </div>
                     <div>
                       <h3 className="text-xl font-medium text-white mb-1">Expert Solutions</h3>

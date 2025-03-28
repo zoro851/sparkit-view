@@ -1,9 +1,8 @@
-
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { 
   Cpu, Tv, Gamepad, Zap, ArrowRight, 
-  Clock, ToolIcon, Award, ShieldCheck 
+  Clock, Wrench, Award, ShieldCheck 
 } from 'lucide-react';
 import ScrollReveal from '../components/ScrollReveal';
 
@@ -50,7 +49,7 @@ const Home = () => {
 
   const benefits = [
     { 
-      icon: <ToolIcon className="h-10 w-10 text-sparkit-blue" />, 
+      icon: <Wrench className="h-10 w-10 text-sparkit-blue" />, 
       title: 'Expert Technicians', 
       description: 'Led by Ajmal Shaheel with years of electronics repair expertise.' 
     },

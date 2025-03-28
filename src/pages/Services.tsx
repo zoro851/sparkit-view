@@ -1,11 +1,12 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { 
   Cpu, Tv, Gamepad, Zap, Wrench, Bug, Database, 
-  RefreshCw, Shield, Cable, BarChart,
-  Tv2, Disc, Fan 
+  RefreshCw, Shield, Cable, BarChart, Home,
+  Tv2, Disc, Fan, Speaker, Radio, Smartphone, Headphones 
 } from 'lucide-react';
 import ScrollReveal from '../components/ScrollReveal';
+import InteractiveBackground from '../components/InteractiveBackground';
 
 const Services = () => {
   const serviceCategories = [
@@ -91,19 +92,46 @@ const Services = () => {
       ]
     },
     {
+      title: 'Home Appliances',
+      icon: <Home className="text-sparkit-blue mb-4 text-4xl" />,
+      description: 'We repair and maintain a wide variety of household appliances to keep your home running smoothly.',
+      services: [
+        {
+          name: 'Audio Equipment',
+          icon: <Speaker size={24} />,
+          description: 'Repairs for amplifiers, speakers, home theater systems, and audio interfaces.'
+        },
+        {
+          name: 'Smart Home Devices',
+          icon: <Smartphone size={24} />,
+          description: 'Troubleshooting and repair of smart home controllers, hubs, and connected appliances.'
+        },
+        {
+          name: 'Entertainment Systems',
+          icon: <Radio size={24} />,
+          description: 'Setup and repair of integrated home entertainment systems and media players.'
+        },
+        {
+          name: 'Audio Accessories',
+          icon: <Headphones size={24} />,
+          description: 'Repair of headphones, wireless earbuds, and portable audio devices.'
+        },
+      ]
+    },
+    {
       title: 'Other Electronics',
       icon: <Zap className="text-sparkit-blue mb-4 text-4xl" />,
       description: 'We repair a wide range of electronic devices beyond computers, TVs, and gaming consoles.',
       services: [
         {
-          name: 'Audio Equipment',
-          icon: <Cable size={24} />,
-          description: 'Repairs for amplifiers, speakers, home theater systems, and audio interfaces.'
+          name: 'Kitchen Appliances',
+          icon: <Wrench size={24} />,
+          description: 'Repairs for electronic kitchen gadgets, microwaves, and digital control systems.'
         },
         {
-          name: 'Home Appliances',
+          name: 'Home Utilities',
           icon: <Wrench size={24} />,
-          description: 'Electronic repairs for kitchen appliances, smart home devices, and entertainment systems.'
+          description: 'Electronic repairs for utility systems, climate controls, and monitoring equipment.'
         },
         {
           name: 'Networking Equipment',
@@ -148,9 +176,12 @@ const Services = () => {
   ];
 
   return (
-    <div className="min-h-screen pt-16">
+    <div className="min-h-screen pt-16 relative overflow-hidden">
+      {/* Interactive Background */}
+      <InteractiveBackground />
+      
       {/* Hero Section */}
-      <section className="py-16 md:py-24 bg-sparkit-dark">
+      <section className="py-16 md:py-24 bg-sparkit-dark/80 relative z-10">
         <div className="container mx-auto px-4">
           <ScrollReveal>
             <h1 className="text-3xl md:text-5xl font-bold mb-6 text-center text-white">
@@ -171,8 +202,45 @@ const Services = () => {
         </div>
       </section>
 
+      {/* Our Team Section */}
+      <section className="py-12 bg-sparkit-dark/90 relative z-10">
+        <div className="container mx-auto px-4">
+          <ScrollReveal>
+            <h2 className="text-2xl md:text-3xl font-bold mb-6 text-center text-white">
+              Meet Our <span className="text-sparkit-blue">Experts</span>
+            </h2>
+          </ScrollReveal>
+          
+          <ScrollReveal delay={0.2}>
+            <div className="w-20 h-1 bg-sparkit-blue mx-auto mb-8"></div>
+          </ScrollReveal>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <ScrollReveal delay={0.3}>
+              <div className="bg-card p-6 rounded-lg border border-border hover:border-sparkit-blue transition-all duration-300 hover:neon-glow group">
+                <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-sparkit-blue transition-colors">Haakim Ahamed</h3>
+                <p className="text-sparkit-blue/80 font-medium mb-2">Software Specialist</p>
+                <p className="text-gray-400">
+                  In charge of software-related problems and providing efficient solutions to get your devices running smoothly.
+                </p>
+              </div>
+            </ScrollReveal>
+            
+            <ScrollReveal delay={0.4}>
+              <div className="bg-card p-6 rounded-lg border border-border hover:border-sparkit-blue transition-all duration-300 hover:neon-glow group">
+                <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-sparkit-blue transition-colors">Abdulla Zulkifil</h3>
+                <p className="text-sparkit-blue/80 font-medium mb-2">Hardware & Software Technician</p>
+                <p className="text-gray-400">
+                  Specialized in both hardware and software problem diagnosis and solutions for all types of electronic devices.
+                </p>
+              </div>
+            </ScrollReveal>
+          </div>
+        </div>
+      </section>
+
       {/* Service Categories */}
-      <section className="py-16 bg-sparkit-darker">
+      <section className="py-16 bg-sparkit-darker/90 relative z-10">
         <div className="container mx-auto px-4">
           {serviceCategories.map((category, index) => (
             <div key={index} className="mb-16 last:mb-0">
@@ -221,7 +289,7 @@ const Services = () => {
       </section>
 
       {/* Repair Process */}
-      <section className="py-16 bg-sparkit-dark">
+      <section className="py-16 bg-sparkit-dark/90 relative z-10">
         <div className="container mx-auto px-4">
           <ScrollReveal>
             <h2 className="text-3xl font-bold mb-3 text-center text-white">
@@ -261,7 +329,7 @@ const Services = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-b from-sparkit-darker to-sparkit-dark">
+      <section className="py-16 bg-gradient-to-b from-sparkit-darker/90 to-sparkit-dark/90 relative z-10">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto bg-card rounded-lg overflow-hidden shadow-lg border border-sparkit-blue/30">
             <div className="relative overflow-hidden">

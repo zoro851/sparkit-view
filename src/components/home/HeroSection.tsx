@@ -4,10 +4,18 @@ import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import ScrollReveal from '../ScrollReveal';
 
+/**
+ * HeroSection Component
+ * 
+ * Main landing section for the homepage featuring a background image,
+ * animated text typing effect, and call-to-action buttons.
+ */
 const HeroSection = () => {
+  // State for the text typing animation
   const [typedText, setTypedText] = useState('');
   const fullText = 'Your Trusted Electronics Repair Shop!';
   
+  // Typing animation effect
   useEffect(() => {
     let currentIndex = 0;
     const typingInterval = setInterval(() => {
@@ -24,11 +32,19 @@ const HeroSection = () => {
 
   return (
     <section className="relative h-screen flex items-center justify-center overflow-hidden">
+      {/* Background with overlay */}
       <div className="absolute inset-0 z-0">
+        {/* Gradient overlay for better text contrast */}
         <div className="absolute inset-0 bg-gradient-to-r from-sparkit-darker to-sparkit-dark/80 z-10" />
-        <div className="absolute inset-0 bg-[url('public/lovable-uploads/6903680f-f7c2-4953-b067-cdca59858c1e.png')] bg-cover bg-center bg-no-repeat opacity-40 z-0" />
+        
+        {/* Hero background image */}
+        <div 
+          className="absolute inset-0 bg-[url('public/lovable-uploads/shop-working.png')] bg-cover bg-center bg-no-repeat opacity-40 z-0" 
+          aria-hidden="true"
+        />
       </div>
       
+      {/* Content container */}
       <div className="container mx-auto px-4 z-10 text-center">
         <ScrollReveal>
           <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white">
@@ -68,6 +84,7 @@ const HeroSection = () => {
         </ScrollReveal>
       </div>
       
+      {/* Scroll indicator */}
       <div className="absolute bottom-10 left-0 right-0 flex justify-center animate-bounce">
         <a href="#services" className="text-white/70 hover:text-white">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="feather feather-chevron-down">

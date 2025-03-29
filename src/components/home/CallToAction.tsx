@@ -3,12 +3,24 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import ScrollReveal from '../ScrollReveal';
 
+/**
+ * CallToAction Component
+ * 
+ * A section that encourages users to take action by contacting the shop
+ * or viewing available services. Features a gradient background and
+ * animated entry effects.
+ */
 const CallToAction = () => {
   return (
     <section className="py-16 bg-sparkit-dark">
       <div className="container mx-auto px-4">
+        {/* CTA Card with background */}
         <div className="bg-gradient-to-r from-sparkit-blue/20 to-sparkit-purple/20 rounded-xl p-8 md:p-12 text-center relative overflow-hidden">
-          <div className="absolute inset-0 bg-[url('public/lovable-uploads/0405b834-7953-44ff-abdf-f426302a2ed4.png')] bg-cover bg-center opacity-10"></div>
+          {/* Background image overlay */}
+          <div 
+            className="absolute inset-0 bg-[url('public/lovable-uploads/shop-working.png')] bg-cover bg-center opacity-10"
+            aria-hidden="true"
+          ></div>
           
           <ScrollReveal>
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white relative z-10">

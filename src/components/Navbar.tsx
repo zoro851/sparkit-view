@@ -3,11 +3,19 @@ import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 
+/**
+ * Navbar Component
+ * 
+ * Responsive navigation bar that changes appearance on scroll and 
+ * provides both desktop and mobile navigation menus.
+ */
 const Navbar = () => {
+  // State for mobile menu toggle and scroll detection
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
 
+  // Effect to detect scrolling and update navbar appearance
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
@@ -31,12 +39,11 @@ const Navbar = () => {
     >
       <div className="container mx-auto px-4 py-4">
         <div className="flex justify-between items-center">
+          {/* Logo/Brand */}
           <Link to="/" className="flex items-center gap-2">
-            <img 
-              src="public/lovable-uploads/b9324a2c-0da6-4708-a0d6-371b892b32e2.png" 
-              alt="Sparkit Logo" 
-              className="h-10"
-            />
+            <span className="text-2xl font-bold bg-gradient-to-r from-sparkit-blue to-sparkit-purple bg-clip-text text-transparent">
+              Sparkit
+            </span>
           </Link>
 
           {/* Desktop Navigation */}

@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { 
   Trophy, Heart, Star, Clock, Wrench,
@@ -13,9 +12,10 @@ const About = () => {
   const galleryImages = [
     'public/lovable-uploads/f5ce1825-e9e0-4ee0-adc2-11838e7180cc.png',
     'public/lovable-uploads/e6bb4fd7-b0dc-4635-a308-e0a20b31bd05.png',
-    'public/lovable-uploads/9ecf0995-ff3c-4206-ab00-6e148cbe4f88.png',
-    'public/lovable-uploads/5242e5bf-7b3f-4973-92d3-5c4df7aaf5b5.png',
-    'public/lovable-uploads/367f5508-e430-4e25-ab07-67875fd2784c.png',
+    'public/lovable-uploads/0405b834-7953-44ff-abdf-f426302a2ed4.png',
+    'public/lovable-uploads/6903680f-f7c2-4953-b067-cdca59858c1e.png',
+    'public/lovable-uploads/88310d2b-3813-4f8e-9fa0-2d215bd838b1.png',
+    'public/lovable-uploads/d3c57411-8fa4-488d-9bb3-16553c8ea572.png',
   ];
 
   const skills = [
@@ -177,7 +177,7 @@ const About = () => {
             <ScrollReveal>
               <div className="relative h-[400px] overflow-hidden rounded-lg transform transition-transform hover:scale-[1.02] duration-500 group">
                 <img 
-                  src="public/lovable-uploads/dd41f59d-43c3-4f8f-a624-3feea1b7efd0.png" 
+                  src="public/lovable-uploads/ajmal-shaheel.png" 
                   alt="Ajmal Shaheel" 
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
@@ -263,7 +263,7 @@ const About = () => {
             <ScrollReveal>
               <div className="relative h-[400px] overflow-hidden rounded-lg transform transition-transform hover:scale-[1.02] duration-500 group">
                 <img 
-                  src="public/lovable-uploads/134731be-0f8b-44dd-948b-6eafb43cd2b5.png" 
+                  src="public/lovable-uploads/haakim.png" 
                   alt="Haakim Ahamed" 
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />

@@ -108,7 +108,7 @@ const CursorEffect = () => {
 
   return (
     <>
-      {/* Enhanced trail effect with variable size and opacity */}
+      {/* Trail effect with variable size and opacity */}
       {trail.map((point, index) => (
         <div
           key={index}
@@ -126,7 +126,6 @@ const CursorEffect = () => {
             zIndex: 49,
             transform: 'translate(-50%, -50%)',
             transition: 'opacity 0.15s ease-out',
-            boxShadow: `0 0 ${5 + index}px rgba(14, 165, 233, ${0.2 * point.opacity})`,
           }}
         />
       ))}
@@ -147,7 +146,6 @@ const CursorEffect = () => {
           pointerEvents: 'none',
           zIndex: 50,
           transform: 'translate(-50%, -50%)',
-          boxShadow: '0 0 10px rgba(14, 165, 233, 0.8)',
           transition: 'opacity 0.15s ease-in-out, transform 0.15s ease-in-out, background-color 0.15s ease-in-out',
         }}
       />
@@ -170,7 +168,6 @@ const CursorEffect = () => {
           transform: 'translate(-50%, -50%)',
           transition: 'transform 0.25s ease-out, opacity 0.2s ease-in-out, border-color 0.25s ease-in-out',
           borderColor: linkHovered ? 'rgba(14, 165, 233, 0.9)' : 'rgba(14, 165, 233, 0.6)',
-          boxShadow: linkHovered ? '0 0 15px rgba(14, 165, 233, 0.4)' : '0 0 10px rgba(14, 165, 233, 0.2)',
         }}
       />
     </>

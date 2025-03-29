@@ -77,7 +77,7 @@ const Home = () => {
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-gradient-to-r from-sparkit-darker to-sparkit-dark/80 z-10" />
-          <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1588508065123-287b28e013da?q=80&w=1770&auto=format&fit=crop')] bg-cover bg-center bg-no-repeat opacity-40 z-0" />
+          <div className="absolute inset-0 bg-[url('public/lovable-uploads/6903680f-f7c2-4953-b067-cdca59858c1e.png')] bg-cover bg-center bg-no-repeat opacity-40 z-0" />
         </div>
         
         <div className="container mx-auto px-4 z-10 text-center">
@@ -263,7 +263,7 @@ const Home = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index) => (
               <ScrollReveal key={index} delay={0.2 + index * 0.1}>
-                <div className="bg-card p-6 rounded-lg border border-border hover:border-sparkit-blue transition-all duration-300 hover:neon-glow text-center">
+                <div className="bg-card p-6 rounded-lg border border-border hover:border-sparkit-blue transition-all duration-300 text-center">
                   <div className="w-16 h-16 mx-auto mb-4 bg-sparkit-blue/10 rounded-full flex items-center justify-center">
                     {benefit.icon}
                   </div>
@@ -284,7 +284,7 @@ const Home = () => {
       <section className="py-16 bg-sparkit-dark">
         <div className="container mx-auto px-4">
           <div className="bg-gradient-to-r from-sparkit-blue/20 to-sparkit-purple/20 rounded-xl p-8 md:p-12 text-center relative overflow-hidden">
-            <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1588508065123-287b28e013da?q=80&w=1770&auto=format&fit=crop')] bg-cover bg-center opacity-10"></div>
+            <div className="absolute inset-0 bg-[url('public/lovable-uploads/0405b834-7953-44ff-abdf-f426302a2ed4.png')] bg-cover bg-center opacity-10"></div>
             
             <ScrollReveal>
               <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white relative z-10">

@@ -334,6 +334,7 @@ const Services = () => {
           <div className="max-w-4xl mx-auto bg-card rounded-lg overflow-hidden shadow-lg border border-sparkit-blue/30">
             <div className="relative overflow-hidden">
               <div className="absolute inset-0 bg-gradient-to-r from-sparkit-blue/20 to-sparkit-purple/20"></div>
+              <div className="absolute inset-0 bg-[url('public/lovable-uploads/88310d2b-3813-4f8e-9fa0-2d215bd838b1.png')] bg-cover bg-center opacity-10"></div>
               <div className="absolute -top-20 -right-20 w-40 h-40 bg-sparkit-blue/30 rounded-full blur-3xl"></div>
               <div className="absolute -bottom-20 -left-20 w-40 h-40 bg-sparkit-purple/30 rounded-full blur-3xl"></div>
               

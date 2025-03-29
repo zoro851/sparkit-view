@@ -73,7 +73,7 @@
   }
 
   .service-card:hover {
-    @apply neon-glow transform scale-105;
+    @apply transform scale-105;
   }
 
   .service-icon {

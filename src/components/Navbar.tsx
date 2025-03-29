@@ -32,12 +32,11 @@ const Navbar = () => {
       <div className="container mx-auto px-4 py-4">
         <div className="flex justify-between items-center">
           <Link to="/" className="flex items-center gap-2">
-            <div className="h-10 w-10 rounded-full bg-sparkit-blue animate-pulse-slow flex items-center justify-center">
-              <span className="text-white font-bold text-xl">S</span>
-            </div>
-            <span className="text-white font-bold text-xl">
-              Spark<span className="text-sparkit-blue">it</span>
-            </span>
+            <img 
+              src="public/lovable-uploads/b9324a2c-0da6-4708-a0d6-371b892b32e2.png" 
+              alt="Sparkit Logo" 
+              className="h-10"
+            />
           </Link>
 
           {/* Desktop Navigation */}

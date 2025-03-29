@@ -126,6 +126,10 @@ export default {
         glow: "glow 3s ease-in-out infinite",
         scale: "scale 0.3s ease-in-out",
       },
+      boxShadow: {
+        'glow-blue': '0 0 15px rgba(0, 162, 255, 0.5)',
+        'glow-purple': '0 0 15px rgba(138, 43, 226, 0.5)',
+      },
     },
   },
   plugins: [require("tailwindcss-animate")],

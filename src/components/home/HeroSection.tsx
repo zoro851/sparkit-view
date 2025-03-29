@@ -48,7 +48,7 @@ const HeroSection = () => {
       <div className="container mx-auto px-4 z-10 text-center">
         <ScrollReveal>
           <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white">
-            Welcome to <span className="text-sparkit-blue animate-pulse transition-all duration-500 hover:scale-105 hover:text-sparkit-accent">Sparkit Electronics</span>
+            Welcome to <span className="bg-gradient-to-r from-sparkit-blue to-sparkit-purple bg-clip-text text-transparent animate-pulse transition-all duration-500">Sparkit Electronics</span>
           </h1>
         </ScrollReveal>
         
@@ -69,14 +69,14 @@ const HeroSection = () => {
           <div className="flex flex-wrap justify-center gap-4">
             <Link 
               to="/services" 
-              className="bg-sparkit-blue hover:bg-sparkit-blue/90 text-white font-medium py-3 px-6 rounded-md transition-all duration-300 flex items-center gap-2 hover:gap-3 group"
+              className="bg-gradient-to-r from-sparkit-blue to-sparkit-purple hover:from-sparkit-blue/90 hover:to-sparkit-purple/90 text-white font-medium py-3 px-6 rounded-md transition-all duration-300 flex items-center gap-2 hover:gap-3 group"
             >
               Our Services
               <ArrowRight className="group-hover:translate-x-1 transition-transform" size={18} />
             </Link>
             <Link 
               to="/contact" 
-              className="border border-white/30 hover:border-sparkit-blue/80 hover:bg-sparkit-blue/10 text-white font-medium py-3 px-6 rounded-md transition-all duration-300"
+              className="border border-white/30 hover:border-sparkit-purple/80 hover:bg-sparkit-purple/10 text-white font-medium py-3 px-6 rounded-md transition-all duration-300"
             >
               Contact Us
             </Link>

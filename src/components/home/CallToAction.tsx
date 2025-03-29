@@ -15,7 +15,7 @@ const CallToAction = () => {
     <section className="py-16 bg-sparkit-dark">
       <div className="container mx-auto px-4">
         {/* CTA Card with background */}
-        <div className="bg-gradient-to-r from-sparkit-blue/20 to-sparkit-purple/20 rounded-xl p-8 md:p-12 text-center relative overflow-hidden">
+        <div className="bg-gradient-to-r from-sparkit-blue/20 to-sparkit-purple/20 rounded-xl p-8 md:p-12 text-center relative overflow-hidden shadow-lg">
           {/* Background image overlay */}
           <div 
             className="absolute inset-0 bg-[url('public/lovable-uploads/shop-working.png')] bg-cover bg-center opacity-10"
@@ -39,13 +39,13 @@ const CallToAction = () => {
             <div className="flex flex-wrap justify-center gap-4 relative z-10">
               <Link 
                 to="/contact" 
-                className="bg-sparkit-blue hover:bg-sparkit-blue/90 text-white font-medium py-3 px-6 rounded-md transition-all duration-300"
+                className="bg-gradient-to-r from-sparkit-blue to-sparkit-purple hover:from-sparkit-blue/90 hover:to-sparkit-purple/90 text-white font-medium py-3 px-6 rounded-md transition-all duration-300"
               >
                 Contact Us Now
               </Link>
               <Link 
                 to="/services" 
-                className="border border-white/30 hover:border-sparkit-blue/80 hover:bg-sparkit-blue/10 text-white font-medium py-3 px-6 rounded-md transition-all duration-300"
+                className="border border-white/30 hover:border-sparkit-purple/80 hover:bg-sparkit-purple/10 text-white font-medium py-3 px-6 rounded-md transition-all duration-300"
               >
                 View All Services
               </Link>

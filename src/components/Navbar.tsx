@@ -63,7 +63,7 @@ const Navbar = () => {
               >
                 {item.name}
                 {location.pathname === item.path && (
-                  <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-sparkit-blue rounded-full" />
+                  <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-gradient-to-r from-sparkit-blue to-sparkit-purple rounded-full" />
                 )}
               </Link>
             ))}
@@ -96,7 +96,9 @@ const Navbar = () => {
               key={item.name}
               to={item.path}
               className={`text-2xl font-medium ${
-                location.pathname === item.path ? 'text-sparkit-blue' : 'text-white'
+                location.pathname === item.path 
+                ? 'bg-gradient-to-r from-sparkit-blue to-sparkit-purple bg-clip-text text-transparent' 
+                : 'text-white'
               } hover:text-sparkit-blue transition-colors`}
             >
               {item.name}

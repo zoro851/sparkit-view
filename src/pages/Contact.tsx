@@ -178,7 +178,7 @@ const Contact = () => {
                   <h3 className="text-xl font-medium text-white mb-4">Shop Exterior</h3>
                   <div className="rounded-lg overflow-hidden animate-fade-in">
                     <img 
-                      src="https://images.unsplash.com/photo-1588508065123-287b28e013da?q=80&w=1770&auto=format&fit=crop" 
+                      src="public/lovable-uploads/e6bb4fd7-b0dc-4635-a308-e0a20b31bd05.png" 
                       alt="Sparkit Electronics Shop Exterior" 
                       className="w-full h-auto"
                     />

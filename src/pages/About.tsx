@@ -11,10 +11,11 @@ const About = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   
   const galleryImages = [
-    'https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?q=80&w=1770&auto=format&fit=crop',
-    'https://images.unsplash.com/photo-1588508065123-287b28e013da?q=80&w=1770&auto=format&fit=crop',
-    'https://images.unsplash.com/photo-1563770660941-10971f2c6834?q=80&w=1770&auto=format&fit=crop',
-    'https://images.unsplash.com/photo-1588508065123-287b28e013da?q=80&w=1770&auto=format&fit=crop',
+    'public/lovable-uploads/f5ce1825-e9e0-4ee0-adc2-11838e7180cc.png',
+    'public/lovable-uploads/e6bb4fd7-b0dc-4635-a308-e0a20b31bd05.png',
+    'public/lovable-uploads/9ecf0995-ff3c-4206-ab00-6e148cbe4f88.png',
+    'public/lovable-uploads/5242e5bf-7b3f-4973-92d3-5c4df7aaf5b5.png',
+    'public/lovable-uploads/367f5508-e430-4e25-ab07-67875fd2784c.png',
   ];
 
   const skills = [
@@ -139,7 +140,7 @@ const About = () => {
             <ScrollReveal delay={0.3} direction="left">
               <div className="relative h-[400px] md:h-[500px] rounded-lg overflow-hidden">
                 <img 
-                  src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?q=80&w=1770&auto=format&fit=crop" 
+                  src="public/lovable-uploads/f5ce1825-e9e0-4ee0-adc2-11838e7180cc.png" 
                   alt="Sparkit Electronics Workshop" 
                   className="w-full h-full object-cover"
                 />
@@ -176,7 +177,7 @@ const About = () => {
             <ScrollReveal>
               <div className="relative h-[400px] overflow-hidden rounded-lg transform transition-transform hover:scale-[1.02] duration-500 group">
                 <img 
-                  src="https://images.unsplash.com/photo-1612299065863-c8e9aad7c43d?q=80&w=1771&auto=format&fit=crop" 
+                  src="public/lovable-uploads/dd41f59d-43c3-4f8f-a624-3feea1b7efd0.png" 
                   alt="Ajmal Shaheel" 
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
@@ -196,7 +197,7 @@ const About = () => {
                   Ajmal Shaheel
                 </h3>
                 <p className="text-gray-300 mb-6">
-                  With over 10 years of experience in electronics repair, Ajmal has developed expertise across a wide range of devices.
+                  With over 30 years of experience in electronics repair, Ajmal has developed expertise across a wide range of devices.
                   His passion for technology and problem-solving has led him to establish Sparkit Electronics, where he applies his 
                   technical knowledge and customer-focused approach to every repair.
                 </p>
@@ -234,7 +235,7 @@ const About = () => {
                   Haakim Ahamed
                 </h3>
                 <p className="text-gray-300 mb-6">
-                  Haakim is our software specialist with extensive knowledge in troubleshooting and resolving complex software issues across multiple operating systems and platforms. His analytical approach and attention to detail make him the go-to person for all software-related problems.
+                  Haakim is our software specialist with 2+ years of extensive knowledge in troubleshooting and resolving complex software issues across multiple operating systems and platforms. His analytical approach and attention to detail make him the go-to person for all software-related problems.
                 </p>
                 <p className="text-gray-300 mb-6">
                   He excels in data recovery, operating system repairs, and providing customized software solutions. Haakim continuously updates his skills to stay current with the latest software technologies and security practices.
@@ -262,7 +263,7 @@ const About = () => {
             <ScrollReveal>
               <div className="relative h-[400px] overflow-hidden rounded-lg transform transition-transform hover:scale-[1.02] duration-500 group">
                 <img 
-                  src="https://images.unsplash.com/photo-1590086782957-93c06ef21604?q=80&w=1774&auto=format&fit=crop" 
+                  src="public/lovable-uploads/134731be-0f8b-44dd-948b-6eafb43cd2b5.png" 
                   alt="Haakim Ahamed" 
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
@@ -310,7 +311,7 @@ const About = () => {
                   Abdulla Zulkifil
                 </h3>
                 <p className="text-gray-300 mb-6">
-                  Abdulla brings versatility to our team with his expertise in both hardware and software repair. His comprehensive understanding of how hardware and software systems interact allows him to diagnose and fix complex issues that span both domains.
+                  Abdulla brings versatility to our team with his 5+ years of expertise in both hardware and software repair. His comprehensive understanding of how hardware and software systems interact allows him to diagnose and fix complex issues that span both domains.
                 </p>
                 <p className="text-gray-300 mb-6">
                   With a background in system integration and networking, Abdulla is particularly skilled at resolving issues that require both physical repairs and software configuration. His holistic approach ensures that repairs address the root cause of problems rather than just the symptoms.
@@ -429,12 +430,12 @@ const About = () => {
                   <h3 className="text-xl font-semibold mb-2 text-white">
                     {item === 1 && "Certified Electronics Technician"}
                     {item === 2 && "CompTIA A+ Certification"}
-                    {item === 3 && "10+ Years Experience"}
+                    {item === 3 && "30+ Years Experience"}
                   </h3>
                   <p className="text-gray-400">
                     {item === 1 && "Industry-recognized certification for electronics repair specialists."}
                     {item === 2 && "Globally recognized certification for PC repair and maintenance."}
-                    {item === 3 && "Over a decade of hands-on experience with various electronic devices."}
+                    {item === 3 && "Over three decades of combined hands-on experience with various electronic devices."}
                   </p>
                 </div>
               </ScrollReveal>

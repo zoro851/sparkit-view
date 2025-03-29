@@ -14,6 +14,7 @@ import Footer from "./components/Footer";
 import CursorEffect from "./components/CursorEffect";
 import InteractiveBackground from "./components/InteractiveBackground";
 
+// Create a consistent reference for the query client
 const queryClient = new QueryClient();
 
 const App = () => (
